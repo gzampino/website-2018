@@ -1,0 +1,1318 @@
+/* 
+00.General rules Section
+01.Navigation Section
+	01.01.Mobile version - max-width: 992px
+	01.02.Desktop version - min-width: 992px
+02.Slide Section (slick plugin)
+03.About Section
+04.Team Section
+05.Team Members Biographies
+06.Purchase Section
+07.Services Section
+08.Brands Section
+09.Pricing Section
+10.Statistics Section
+11.Portfolio Section
+12.Contacts Section
+13.Footer Section
+14.Key frames
+15.Media queries
+*/
+
+/* <<<<<<<<<<<< 00.General rules Section >>>>>>>>>>>> */
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body * {
+	-webkit-font-smoothing: antialiased !important;
+	text-rendering: auto;
+}
+
+h1, h2, h3, h4, h5, h6, a {
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	text-rendering: auto;
+}
+
+a, a:hover, a:active, a:focus {
+	text-decoration: none;
+}
+/* ============== 00.General rules Section ends ============== */
+
+/* <<<<<<<<<<<<<< 01.Navigation Section >>>>>>>>>>>>>>> */
+.navbar {
+	font-size: 12px;
+	font-weight: 700;
+	letter-spacing: 2.5px;
+	text-transform: uppercase;
+	border: none;
+	background-color: #fff;
+}
+
+.navbar a {
+	color: #000;
+	transition: all 0.3s ease-in-out;
+}
+
+/* <<<<<<<<<<<<<<<<< 01.01.Mobile version - max-width: 992px >>>>>>>>>>>>>>>> */
+.navbar .navbar-header .navbar-toggle .icon-bar {
+	background-color: #000;
+}
+
+.navbar .navbar-header .navbar-brand {
+	padding: 8px 0 10px 16px;
+}
+/* ================ 01.01.Mobile version - max-width: 992px ends ================= */
+
+/* <<<<<<<<<<<<<<< 01.02.Desktop version - min-width: 992px >>>>>>>>>>>>>>> */
+.navbar .nav > li > a {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.navbar .nav li a:hover,
+.navbar .nav li a:focus,
+.navbar .nav li a.active {
+	color: #0d4494;
+}
+
+.navbar .nav li .dropdown-menu {
+	border: 1px solid #7f7f7f;
+	border-radius: 0;
+	box-shadow: none;
+}
+
+.dropdown-menu li a {
+	font-size: 12px;
+	font-weight: 700;
+	letter-spacing: 1.5px;
+	text-transform: initial;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+.dropdown-menu li a:before {
+	content: "-";
+}
+
+.dropdown-menu li a:hover {
+	background-color: transparent;
+}
+
+.navbar .nav .open > a, 
+.navbar .nav .open > a:hover, 
+.navbar .nav .open > a:focus {
+	background-color: transparent;
+	border: none;
+}
+/* ================ 01.02.Desktop version - min-width: 992px ends ================= */
+/* ================ 01.Navigation Section ends ================ */
+
+/* <<<<<<<<<<<<<<< 02.Slide Section (slick plugin) >>>>>>>>>>>>>>>> */
+.slick-slider .item {
+	position: relative;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 650px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+.slick-slider .item.first {
+	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/slider-1.jpg');
+}
+
+.slick-slider .item.second {
+	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/slider-2.jpg');
+}
+
+.slick-slider .item.third {
+	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/slider-3.jpg');
+}
+
+.slick-slider .item .contain {
+	position: relative;
+	width: 100%;
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	color: #CCCCCC;
+}
+
+.slick-slider .item .contain .top-text {
+	font-size: 30px;
+	font-weight: 700;
+	letter-spacing: 12px;
+}
+
+.slick-slider .item .contain .bottom-text {
+	font-size: 14px;
+	line-height: 14px;
+	letter-spacing: 15px;
+}
+
+.slick-slider .slick-arrow {
+	position: absolute;
+	top: 50%;
+	margin-top: -15px;
+	right: 0;
+	width: 55px;
+	display: inline-block;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 10px;
+	font-weight: 700;
+	letter-spacing: 2px;
+	text-align: center;
+	text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
+	text-transform: uppercase;
+	background-color: #fff;
+	color: #000;
+	border: none;
+	outline: none;
+	padding: 8px 0;
+	transition: all 0.2s ease-in 0s;
+}
+
+.slick-slider .slick-arrow:hover {
+	color: #fff;
+	background-color: #0d4494;
+}
+
+.slick-slider .slick-arrow.slick-prev {
+	left: 0;
+	border-radius: 0 1px 1px 0;
+	z-index: 1;
+}
+
+.slick-slider .slick-dots {
+	position: absolute;
+	display: block;
+	bottom: 45px;
+	width: 100%;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+
+.slick-slider .slick-dots li {
+	display: inline-block;
+}
+
+.slick-slider .slick-dots li button {
+  display: block;
+  height: 5px;
+  width: 40px;
+  background-color: #fff;
+  border: none;
+  margin: 5px 7px;
+  opacity: 0.5;
+}
+
+.slick-slider .slick-dots .slick-active button {
+ 	opacity: 1;
+ 	outline: none;
+}
+/* ================== 02.Slide Section (slick plugin) ends ================== */
+
+/* <<<<<<<<<<<<<<<<<< 03.About Section >>>>>>>>>>>>>>>>>> */
+.about-section {
+	position: relative;
+}
+
+.about-section .image-container {
+	height: 100%;
+	position: absolute;
+	top: 0;
+	padding: 0;
+}
+
+.about-section .image-container .about-bg-image-holder {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	background: url('../img/about-background.jpg') no-repeat center center;
+	background-size: cover;
+}
+
+.about-section .about-pad {
+	padding: 100px 0 100px 100px;
+}
+
+.about-section .about-info {
+	font-size: 16px;
+	letter-spacing: 1px;
+	line-height: 24px;
+	color: #5e5e5e;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+	margin: 0 0 30px;
+}
+
+.about-section .about-info h2 {
+	font-size: 45px;
+	font-weight: 700;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	color: #1a1a1a;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+	margin-bottom: 25px;
+	padding: 0 0 35px;
+}
+
+.about-section .about-info .about-sub-title {
+	font-size: 25px;
+	font-weight: 400;
+	line-height: 28px;
+	color: #0d4494;
+}
+
+.about-section .about-info .text p {
+	margin: 2em 0;
+}
+/* ================== 03.About Section ends ==================== */
+
+/* <<<<<<<<<<<<<<<< 04.Team Section >>>>>>>>>>>>>>>>> */
+.team-section {
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	background-color: #f5f7fa;
+	padding: 4em;
+	transform: translateX(0);
+	transition: transform 0.3s;
+}
+
+.team-section.slide-out {
+	transform: translateX(-570px);
+}
+
+.team-section .team-container {
+	max-width: 1200px;
+	width: 90%;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.team-section h2 {
+	font-size: 15px;
+	font-weight: 700;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	color: #1a2f2a;
+	margin-bottom: 2em;
+}
+
+.team-section .team-container ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.team-section .team-member {
+	float: left;
+	width: 31%;
+	margin-right: 3.5%;
+	margin-bottom: 2em;
+	border-radius: 2px;
+	box-shadow: 0 0 10px rgba(92, 75, 81, 0);
+	transition: all 0.3s;
+}
+
+.team-section .team-member:nth-child(3) {
+	margin-right: 0;
+}
+
+.team-section .team-member:hover {
+	box-shadow: 0 0 10px rgba(92, 75, 81, 0.3);
+}
+
+.team-section .team-member .member-img {
+	position: relative;
+}
+
+.team-section .team-member .member-img img {
+	display: block;
+	width: 100%;
+	border-radius: 2px 2px 0 0;
+}
+
+.team-section .team-member .member-img .bg-img-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 2px 2px 0 0;
+	background-color: rgba(13, 68, 148, 0.9);
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+
+.team-section .team-member:hover .bg-img-overlay {
+	opacity: 1;
+}
+
+.team-section .team-member .member-img .bg-img-overlay h5 {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	font-size: 15px;
+	font-weight: 700;
+	letter-spacing: 2px;
+	color: #fff;
+	text-transform: uppercase;
+	margin: 0;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+.team-section .team-member .member-info {
+	height: 80px;
+	letter-spacing: 2px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #0d4494;
+	background-color: #fff;
+	border-radius: 0 0 2px 2px;
+	padding-top: 20px;
+}
+
+.team-section .team-member .member-info h4 {
+	font-size: 12px;
+	font-weight: 700;
+	margin: 0;
+}
+
+.team-section .team-member .member-info span {
+	display: block;
+	font-family: sans-serif;
+	font-size: 10px;
+	font-weight: 700;
+	line-height: 11px;
+	color: #999999;
+	margin-top: 0.55em;
+}
+
+.team-section .team-section-overlay {
+	position: absolute;
+	display: none;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: rgba(13, 68, 148, 0.7);
+	cursor: pointer;
+}
+
+.team-section.slide-out .team-section-overlay {
+	display: block;
+	animation: fade-in 0.3s;
+}
+/* ==================== 04.Team Section ends ================= */
+
+/* <<<<<<<<<<<<<< 05.Team Members Biographies >>>>>>>>>>>>>>>*/
+.member-bio {
+	overflow-y: auto;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	right: 0;
+	width: 570px;
+	height: 100%;
+	background-color: #fff;
+	transform: translateX(570px);
+	transition: transform 0.3s;
+}
+
+.member-bio.slide-in {
+	transform: translateX(0);
+}
+
+.member-bio .member-bio-img {
+	position: relative;
+}
+
+.member-bio .member-bio-img:after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.15;
+	background-image: linear-gradient(-108deg, #3377de, #6222c6);
+}
+
+.member-bio .member-bio-img img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+.member-bio .member-bio-content {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+	padding: 2em;
+	transform: translateY(-80px);
+}
+
+.member-bio .member-bio-content h1 {
+	font-size: 15px;
+	font-weight: 700;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	color: #fff;
+	margin: 20px 0 15px;
+	padding-bottom: 30px;
+}
+
+.member-bio .member-bio-content span {
+	font-family: 'Montserrat',sans-serif;
+	font-weight: 700;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+	color: #0d4494;
+	margin: 1em 1.9em 0;
+}
+
+.member-bio .member-bio-content p {
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 28px;
+	color: #5e5e5e;
+	margin: 1em 1.9em 0;
+	padding: 0 0 15px;
+}
+
+.member-bio .member-bio-content .social-net {
+	position: absolute;
+	font-size: 12px;
+	top: 80px;
+	left: 0;
+}
+
+.member-bio .member-bio-content .social-net a {
+	display: block;
+}
+
+.member-bio .member-bio-content .social-net a i {
+	height: 40px;
+	width: 40px;
+	line-height: 40px;
+	text-align: center;
+	color: #fff;
+	background: #000;
+	border-bottom: 1px solid #333333;
+	transition: all 0.2s ease-in 0s;
+}
+
+.member-bio .member-bio-content .social-net a i:hover {
+	background: rgba(0, 0, 0, 0.85);
+}
+
+.member-bio-close {
+	display: none;
+	position: fixed;
+	z-index: 2;
+	bottom: 30px;
+	right: 25px;
+}
+
+.member-bio-close.is-visible {
+	display: block;
+	animation: move-in 0.8s;
+}
+
+.member-bio-close i {
+	font-size: 25px;
+	color: #fff;
+	background-color: #000;
+	padding: 14px 17px;
+	cursor: pointer;
+	transition: all 0.2s ease 0s;
+}
+
+.member-bio-close i:hover {
+	background-color: #0d4494;
+}
+/* =============== 05.Team Members Biographies ends ================ */
+
+/* <<<<<<<<<<<<<< 06.Purchase Section >>>>>>>>>>>>>>> */
+.purchase-section {
+	background: url('../img/buy-background.jpg') no-repeat bottom center fixed;
+	background-size: cover;
+	text-align: center;
+	padding: 45px 0 35px;
+}
+
+.purchase-section h4 {
+	font-size: 22px;
+	font-weight: 600;
+	letter-spacing: 3px;
+	color: #fff;
+	text-transform: uppercase;
+	margin: 20px 0 15px;
+}
+
+.purchase-section .btn-buy {
+	display: inline-block;
+	font-size: 12px;
+	font-weight: 700;
+	letter-spacing: 4px;
+	line-height: 15px;
+	text-transform: uppercase;
+	color: #fff;
+	background-color: rgba(13, 68, 148, 1);
+	margin: 20px 0 10px;
+	padding: 12px 24px;
+	transition: all 0.1s ease-in 0s;
+}
+
+.purchase-section .btn-buy:hover {
+	background-color: rgba(13, 68, 148, 0.95);
+}
+/* ================= 06.Purchase Section ends ================= */
+
+/* <<<<<<<<<<<<<<<< 07.Services Section >>>>>>>>>>>>>>>> */
+.services-section {
+	position: relative;
+	color: #1a1a1a;
+}
+
+.services-section .services-content {
+	margin: 100px 100px 80px 0;
+}
+
+.services-section .services-content h2 {
+	font-size: 45px;
+	font-weight: 700;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+	margin-bottom: 25px;
+	padding: 0 0 35px;
+}
+
+.services-section .services-content .services-pad {
+	list-style-type: none;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+	margin: 16px 0;
+	padding: 0;
+}
+
+.services-section .services-content .services-pad li {
+	margin: 5% 0 0 0;
+}
+
+.services-section .services-content .services-pad li i {
+	display: inline-block;
+	float: left;
+	width: 56px;
+	font-size: 30px;
+	line-height: 42px;
+	text-align: center;
+	color: #0d4494;
+	border: 3px solid #f5f7fa;
+	padding: 10px;
+	cursor: pointer;
+	transition: all 0.2s ease 0s;
+}
+
+.services-section .services-content .services-pad li i:hover {
+	opacity: 0.7;
+	transition: all 0.2s ease 0s;
+}
+
+.services-section .services-content .services-pad li h4 {
+	width: 100%;
+	font-size: 12px;
+	font-weight: 700;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	color: #000;
+	margin: 0 0 12px 80px;
+}
+
+.services-section .services-content .services-pad li p {
+	font-size: 15px;
+	font-weight: 400;
+	letter-spacing: 1px;
+	line-height: 24px;
+	color: #5e5e5e;
+	margin: 0 0 0 80px;
+	padding: 0 0 30px;
+}
+
+.services-section .image-container {
+	height: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 0;
+}
+
+.services-section .image-container .services-bg-img-holder {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	background: url('../img/services-background.jpg') no-repeat center center;
+	background-size: cover;
+}
+/* ================= 07.Services Section ends ================== */
+
+/* <<<<<<<<<<<<<<<< 08.Brands Section >>>>>>>>>>>>>>>>> */
+.brands-section {
+	background: url('../img/pattern.png') repeat 0 0;
+	text-align: center;
+	padding: 22px 0;
+}
+
+.brands-section .brand img {
+	max-width: 120px;
+	margin: 15px 0;
+}
+/* ================== 08.Brands Section ends ================= */
+
+/* <<<<<<<<<<<<<<<<< 09.Pricing Section >>>>>>>>>>>>>>>>> */
+.pricing-section {
+	position: relative;
+	text-align: center;
+}
+
+.pricing-section .image-container {
+	height: 100%;
+	position: absolute;
+	top: 0;
+	padding: 0;
+}
+
+.pricing-section .image-container .pricing-bg-image-holder {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	background: url('../img/pricing-background.jpg') no-repeat center center;
+	background-size: cover;
+}
+
+.pricing-section .pricing-pad {
+	padding: 100px 0 100px 100px;
+}
+
+.pricing-section .pricing-pad h2 {
+	font-size: 45px;
+	font-weight: 700;
+	letter-spacing: 3px;
+	color: #1a1a1a;
+	text-align: left;
+	text-transform: uppercase;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+	margin-bottom: 25px;
+	padding: 0 0 35px;
+}
+
+.pricing-section .pricing-pad .plan {
+	margin-top: 40px;
+}
+
+.pricing-section .pricing-pad .plan .name-plan {
+	font-size: 15px;
+	font-weight: 700;
+	letter-spacing: 8px;
+	color: #000;
+	text-transform: uppercase;
+	margin: 0 58px 0 0;
+	padding: 0 0 20px;
+}
+
+.pricing-section .pricing-pad .plan .tarif-plan {
+	float: left;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 70px;
+	color: #000;
+	margin: -5px 0 0;
+}
+
+.pricing-section .pricing-pad .plan .tarif-plan span {
+	position: relative;
+	bottom: 33px;
+	font-size: 20px;
+}
+
+.pricing-section .pricing-pad .plan .tarif-plan.active {
+	color: #0d4494;
+}
+
+.pricing-section .pricing-pad .plan .options-plan {
+	display: inline-block;
+	font-size: 11px;
+	font-weight: 700;
+	letter-spacing: 3px;
+	color: #5e5e5e;
+	text-align: left;
+	text-transform: uppercase;
+	margin: 0 70px 40px 0;
+}
+
+.pricing-section .pricing-pad .plan .options-plan p {
+	margin: 0;
+	padding: 4px 0;
+}
+
+.pricing-section .pricing-pad .plan .sign-up {
+	width: 140px;
+	font-size: 10px;
+	font-weight: 700;
+	letter-spacing: 3px;
+	color: #fff;
+	background-color: #0d4494;
+	text-transform: uppercase;
+	margin-top: 15px;
+	padding: 4px 0;
+	position: absolute;
+	right: -10.2%;
+	transform: rotate(-90deg);
+	transition: all 0.3s ease-in 0s;
+}
+
+.pricing-section .pricing-pad .plan .sign-up:hover {
+	background-color: rgba(13, 68, 148, 0.8);
+}
+/* ================== 09.Pricing Section ends ================== */
+
+/* <<<<<<<<<<<<<<<<<< 10.Statistics Section >>>>>>>>>>>>>>>> */
+.stats-section {
+	background: url('../img/pattern.png') repeat 0 0;
+	text-align: center;
+	padding: 35px 0 25px;
+}
+
+.stats-section .stats {
+	margin-bottom: 20px;
+}
+
+.stats-section .stats i {
+	font-size: 30px;
+	line-height: 42px;
+	color: #0d4494;
+}
+
+.stats-section .stats h4 {
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 17px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	margin: 0;
+}
+
+.stats-section .stats span {
+	font-size: 13px;
+	font-weight: 400;
+	letter-spacing: 0.7px;
+}
+/* ================= 10.Statistics Section ends ================= */
+
+/* <<<<<<<<<<<<<<<< 11.Portfolio Section >>>>>>>>>>>>>>>> */
+.portfolio-section {
+	text-align: center;
+	color: #1a1a1a;
+	padding: 50px 0;
+}
+
+.portfolio-section h2 {
+	font-size: 45px;
+	font-weight: 700;
+	letter-spacing: 3px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+	margin-bottom: 25px;
+	padding-bottom: 35px;
+}
+
+.portfolio-section ul {
+	list-style-type: none;
+	margin: 0 auto 50px;
+	padding: 0;
+}
+
+.portfolio-section ul li {
+	display: inline-block;
+	position: relative;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 15px;
+	font-weight: 700;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	color: #5e5e5e;
+	margin: 0 8px 15px;
+	padding: 0 12px;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out 0s;
+}
+
+.portfolio-section ul li.active {
+	color: #0d4494 !important;
+}
+
+.portfolio-section ul li:hover {
+	color: #000;
+}
+
+.portfolio-section ul li .filtr-counter {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	opacity: 0;
+	width: 34px;
+	font-size: 11px;
+	text-align: center;
+	color: #000;
+	background-color: #fff;
+	border: 2px solid #000;
+	border-radius: 3px;
+	margin: 0 auto;
+	padding: 4px 0;
+	transition: all 0.3s ease;
+}
+
+.portfolio-section ul li:hover .filtr-counter {
+	bottom: 35px;
+	opacity: 1;
+}
+
+.portfolio-section ul li .filtr-counter:before {
+	content: "";
+	position: absolute;
+	bottom: -5px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	width: 0;
+	height: 0;
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+	border-top: 5px solid #000;
+	display: none;
+}
+
+.portfolio-section ul li:hover .filtr-counter:before {
+	display: block;
+}
+
+.portfolio-section .filtr-item {
+	overflow: hidden;
+	padding: 0;
+	transition: all 0.6s ease-in-out;
+	position: relative;
+}
+
+.portfolio-section .filtr-item .project-wrapper {
+	border: 1px solid #fff;
+	position: relative;
+	overflow: hidden;
+}
+
+.portfolio-section .filtr-item img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	transition: transform 0.6s cubic-bezier(0.190, 1.000, 0.220, 1.000);
+}
+
+.portfolio-section .filtr-item:hover img {
+	transform: scale(1.25);
+}
+
+.portfolio-section .filtr-item .project-caption {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(115, 115, 128, 0.15);
+	opacity: 1;
+	z-index: 2;
+	transition: opacity 0.9s cubic-bezier(0.190, 1.000, 0.220, 1.000);
+}
+
+.portfolio-section .filtr-item:hover .project-caption {
+	opacity: 0;
+}
+
+.portfolio-section .filtr-item .project-caption .project-body {
+	color: #fff;
+	text-transform: uppercase;
+	margin-top: 35%;
+}
+
+.portfolio-section .filtr-item .project-caption .project-body h4 {
+	font-size: 14px;
+	font-weight: 700;
+	letter-spacing: 4px;
+	line-height: 18px;
+	margin: 0 0 5px;
+}
+
+.portfolio-section .filtr-item .project-caption .project-body p {
+	font-size: 11px;
+	font-weight: 700;
+	letter-spacing: 1px;
+	margin: 0;
+}
+/* ================== 11.Portfolio Section ends ================== */
+
+/* <<<<<<<<<<<<<<<<<< 12.Contacts Section >>>>>>>>>>>>>>>>>> */
+.contacts-section {
+	padding: 50px 0 100px;
+}
+
+.contacts-section h2 {
+	font-size: 45px;
+	font-weight: 700;
+	letter-spacing: 3px;
+	text-align: center;
+	text-transform: uppercase;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+	margin-bottom: 25px;
+	padding: 0 0 35px;
+}
+
+.contacts-section p {
+	padding-bottom: 14px;
+}
+	
+	/* Placeholder color setup */
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #0d4494;
+}
+::-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #0d4494;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #0d4494;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #0d4494;
+}
+	/* /// Placeholder color setup ends /// */
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+.contactform select,
+.contactform textarea {
+	height: 50px;
+	width: 100%;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 11px;
+	font-weight: 700;
+	letter-spacing: 4px;
+	color: #0d4494;
+	text-transform: uppercase;
+	border: none;
+	border-bottom: 3px solid #000;
+	outline: 0;
+	margin: 0 0 20px;
+	padding: 5px 0 0;
+	transition: all 0.5s ease 0s;
+}
+
+input[type="tel"] {
+	float: left;
+	width: 47%;
+	margin: 0;
+}
+
+.contactform select {
+	float: left;
+	width: 50%;
+	height: 39px;
+	background-color: #fff;
+	margin: 11px 0 0 3%;
+	padding: 5px 0 10px;
+}
+
+.contactform textarea {
+	height: 70px;
+	padding: 40px 0 0;
+}
+
+input[type="submit"] {
+	position: relative;
+	top: -5px;
+	width: 100%;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 10px;
+	font-weight: 700;
+	letter-spacing: 4px;
+	text-transform: uppercase;
+	color: #fff;
+	background-color: #0d4494;
+	border: none;
+	padding: 15px 0;
+	outline: 0;
+	transition: all 0.2s ease-in 0s;
+}
+
+.contacts-section .contacts-details {
+	padding: 38px 0 22px 10%;
+}
+
+.contacts-section .contacts-details div {
+	font-size: 12px;
+	font-weight: 400;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	color: #000;
+}
+
+.contacts-section .contacts-details div:nth-child(2) {
+	padding: 25px 0;
+}
+
+.contacts-section .contacts-details div span {
+	display: block;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 20px;
+	font-weight: 700;
+	letter-spacing: 2px;
+	line-height: 24px;
+	margin-bottom: 3px;
+	color: #0d4494;
+}
+
+.contacts-section .social-net {
+	position: absolute;
+	left: 10%;
+}
+
+.contacts-section .social-net a {
+	margin: 0 12px;
+}
+
+.contacts-section .social-net a.fb {
+	margin-left: 18px;
+}
+
+.contacts-section .social-net a i {
+	height: 55px;
+	width: 55px;
+	line-height: 30px;
+	text-align: left;
+	color: #fff;
+	margin: 0 -6px 0 0;
+	padding: 2px 8px;
+	transition: all 0.2s ease-in 0s;
+}
+
+.fb i {
+	background-color: #3B5A9B;
+}
+
+.twitter i {
+	background-color: #2B97F0;
+}
+
+.gplus i {
+	background-color: #DB2814;
+}
+
+.linkedin i {
+	background-color: #0077b5;
+}
+
+.behance i {
+	background-color: #131418;
+}
+/* =================== 12.Contacts Section ends ================= */
+
+/* <<<<<<<<<<<<<<<<<< 13.Footer Section >>>>>>>>>>>>>>>>>> */
+.footer {
+	width: 100%;
+	text-align: center;
+	padding: 15px 0;
+}
+
+.footer .copyright {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 10px;
+	font-weight: 700;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	color: #000;
+}
+
+.footer .copyright a {
+	color: #000;
+}
+/* =================== 13.Footer Section ends ================= */
+
+/* <<<<<<<<<<<<<<<<<<< 14.Key frames >>>>>>>>>>>>>>>>>>> */
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes move-in {
+	0% {
+		transform: translateX(100px);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+/* =================== 14.Key frames ends ================= */
+
+/* <<<<<<<<<<<<<<<<<< 15.Media queries >>>>>>>>>>>>>>>>>> */
+@media screen and (max-width: 1200px) {
+
+/* 04.About Section */
+	.about-section .about-pad {
+		padding: 100px 0 100px 20px;
+	}
+
+/* 05.Team Section */
+	.team-section h2 {
+		margin-bottom: 1em;
+	}
+
+/* 09.pricing-section */
+	.pricing-section .pricing-pad {
+		padding: 100px 0 100px 10px;
+	}
+}
+
+@media screen and (max-width: 992px) {
+
+/* 02.Navigation Section */
+	.navbar {
+		margin: 0;
+	}
+	.navbar .navbar-header {
+		float: none;
+	}
+	.navbar .navbar-header .navbar-brand {
+		padding: 10px 0 10px 16px;
+	}
+	.navbar .navbar-header .navbar-toggle {
+		display: block !important;
+		border: none;
+		margin: 15px;
+		padding: 9px 10px;
+		transition: all 0.4s ease 0s;
+	}
+	.navbar-collapse.collapse {
+		display: none !important;
+	}
+	.navbar-collapse.collapse.in {
+		display: block !important;
+		max-height: 100%;
+	}
+	.navbar .nav > li {
+		width: 100%;
+		text-align: center;
+	}
+	.navbar .nav > li > a {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	.navbar .nav li > .dropdown-menu {
+		position: relative;
+		width: 100%;
+		border: none;
+		text-align: center;
+	}
+
+/* 04.About Section */
+	.about-section .about-pad {
+		padding: 100px 32px 100px;
+	}
+
+/* 07.Services Section */
+	.services-section .services-content .services-pad {
+		margin: 100px 100px 80px 12px;
+	}
+
+/* 09.pricing-section */
+	.pricing-section .pricing-pad {
+		padding: 100px 0 100px 30px;
+	}
+	.pricing-section .pricing-pad .plan .sign-up {
+		right: -3%;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	
+/* 05.Team Section */
+	.team-section {
+ 		padding: 2em 0;
+	}
+	.team-section.slide-out {
+		transform: translateX(-320px);
+	}
+  	.team-section .team-member {
+	 	float: none;
+	 	width: 100%;
+	 	margin-right: 0;
+	}
+
+/* 05.01.Team Members Biographies */
+	.member-bio {
+		width: 320px;
+		transform: translateX(320px);
+	}
+	.member-bio .member-bio-content {
+		padding: 2.5em 3em;
+	}
+
+ /* 07.Services Section */
+	.services-section .services-content {
+		margin: 100px 20px 80px 0;
+	}
+}
+
+@media screen and (max-width: 602px) {
+	
+/* 11.Portfolio Section */
+	.portfolio-section .filtr-item {
+		float: none;
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	
+/* 12.Contacts Section */
+	.contacts-section .social-net a {
+		margin: 0 8px;
+	}
+	.contacts-section .social-net a.fb {
+		margin-left: 12px;
+	}
+	.contacts-section .social-net a i {
+		width: 30px;
+		height: 30px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+
+/* 07.Services Section */
+	.services-section .services-content .services-pad {
+		margin: 100px 65px 80px 12px;
+	}
+}
+/* ================= 15.Media queries end s================== */
